@@ -9,22 +9,27 @@ export class LoginPage{
     readonly signupButton: Locator
     readonly text : Locator
     readonly name: Locator
+    readonly verifyOtpButton : Locator
     
-    constructor(page){
-        this.loginIcon = this.page.locator('.-dOa_b L_FVxe');
-        this.userNameField = this.page.locator('.r4vIwl BV+Dqf')
-        this.requestOtpButton = this.page.locator('.QqFHMw twnTnD _7Pd1Fp')
+    constructor(page: Page){
+        this.page = page
+        this.loginIcon = page.getByText('Login').first();
+        this.userNameField = page.locator('form').filter({ hasText: 'Enter Email/Mobile numberBy' }).getByRole('textbox')
+        this.requestOtpButton = page.getByRole('button', { name: 'Request OTP' })
         this.text = this.page.getByText('Please enter the OTP sent to')
+        this.verifyOtpButton = page.getByRole('button', { name: 'Verify' })
         this.name = this.page.getByText('Ayush')
-        
     }
 
     async login(){
-        await this.loginIcon.click()
-        await this.userNameField.fill('aayushchand900@gmail.com')
+        // await this.loginIcon.click()
+        await this.page.waitForTimeout(5000)      
+        await this.userNameField.fill('8586063697')
         await this.requestOtpButton.click()
-        // await expect (this.text).toBeVisible()
-        // await expect (this.text).toBeVisible()
+        await expect (this.text).toBeVisible()
+        await this.page.waitForTimeout(30000)
+        //await this.verifyOtpButton.click()
+
     }
     
 

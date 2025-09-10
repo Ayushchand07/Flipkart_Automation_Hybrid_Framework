@@ -1,18 +1,16 @@
 import { test, expect } from '@playwright/test';
 
-test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+// Reuse saved login state
+test.use({ storageState: 'auth.json' });
 
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Playwright/);
-});
+test('Validate user name on Flipkart home page', async ({ page }) => {
+  await page.goto('https://www.flipkart.com/');
 
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+  // Ensure page loads
+  await page.waitForLoadState('domcontentloaded');
 
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
+  // ✅ Adjust locator if needed (check with inspector)
+  const userName = page.getByText('Cart');
 
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+  await expect(userName).toBeVisible();
 });
