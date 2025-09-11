@@ -15,6 +15,9 @@ export class LoginPage{
     readonly name: Locator
     readonly verifyOtpButton : Locator
     readonly emptyEmailToaster : Locator
+
+    readonly profileIcon : Locator
+    readonly logoutOption: Locator
     
     constructor(page: Page){
         this.page = page
@@ -25,6 +28,9 @@ export class LoginPage{
         this.verifyOtpButton = page.getByRole('button', { name: 'Verify' })
         this.name = this.page.getByText('Ayush')
         this.emptyEmailToaster = this.page.getByText('Please enter valid Email ID/Mobile number')
+        this.profileIcon = this.page.locator("._1TOQfO")
+        this.logoutOption = this.page.getByText('Logout')
+
     }
 
     async navigateToUrl(){
@@ -52,6 +58,12 @@ export class LoginPage{
         await this.page.waitForTimeout(5000)
         await this.requestOtpButton.click()
         await expect(this.emptyEmailToaster).toBeVisible()
+    }
+
+    async logout(){
+        await this.profileIcon.hover()
+        await this.logoutOption.click()
+        await expect(this.loginIcon).toBeVisible()
     }
     
 

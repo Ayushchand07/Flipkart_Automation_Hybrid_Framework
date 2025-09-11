@@ -20,115 +20,115 @@ Priority
 
 🔑 Authentication (Login/Signup/Logout)
 
-TC_AUTH_001 – Verify login with valid credentials.
+TC_AUTH_001: Verify login with valid credentials.
 
-TC_AUTH_002 – Verify login with invalid credentials.
+TC_AUTH_002: Verify login with invalid credentials.
 
-TC_AUTH_003 – Verify login with empty fields.
+TC_AUTH_003: Verify login with empty fields.
 
-TC_AUTH_004 – Verify OTP login flow (if available).
+TC_AUTH_004: Verify OTP login flow (if available).
 
-TC_AUTH_005 – Verify login with “Remember me” option.
+TC_AUTH_005: Verify login with “Remember me” option.
 
-TC_AUTH_006 – Verify new user sign-up with valid details.
+TC_AUTH_006: Verify new user sign-up with valid details.
 
-TC_AUTH_007 – Verify error when signing up with existing email/phone.
+TC_AUTH_007: Verify error when signing up with existing email/phone.
 
-TC_AUTH_008 – Verify password reset flow with valid email/phone.
+TC_AUTH_008: Verify password reset flow with valid email/phone.
 
-TC_AUTH_009 – Verify logout functionality.
+TC_AUTH_009: Verify logout functionality.
 
-TC_AUTH_010 – Verify session timeout logs user out.
+TC_AUTH_010: Verify session timeout logs user out.
 
 🔍 Search & Filters
 
-TC_SEARCH_011 – Verify search with valid keyword shows relevant results.
+TC_SEARCH_011: Verify search with valid keyword shows relevant results.
 
-TC_SEARCH_012 – Verify search with invalid keyword shows “No results.”
+TC_SEARCH_012: Verify search with invalid keyword shows “No results.”
 
-TC_SEARCH_013 – Verify autocomplete suggestions in search bar.
+TC_SEARCH_013: Verify autocomplete suggestions in search bar.
 
-TC_SEARCH_014 – Verify search results pagination.
+TC_SEARCH_014: Verify search results pagination.
 
-TC_SEARCH_015 – Verify sorting: Price Low → High.
+TC_SEARCH_015: Verify sorting: Price Low → High.
 
-TC_SEARCH_016 – Verify sorting: Price High → Low.
+TC_SEARCH_016: Verify sorting: Price High → Low.
 
-TC_SEARCH_017 – Verify sorting: Customer Ratings.
+TC_SEARCH_017: Verify sorting: Customer Ratings.
 
-TC_SEARCH_018 – Verify filtering by brand.
+TC_SEARCH_018: Verify filtering by brand.
 
-TC_SEARCH_019 – Verify filtering by price range.
+TC_SEARCH_019: Verify filtering by price range.
 
-TC_SEARCH_020 – Verify filtering by discount.
+TC_SEARCH_020: Verify filtering by discount.
 
 📦 Product Details Page (PDP)
 
-TC_PDP_021 – Verify product images are displayed.
+TC_PDP_021: Verify product images are displayed.
 
-TC_PDP_022 – Verify product name, price, and specifications are correct.
+TC_PDP_022: Verify product name, price, and specifications are correct.
 
-TC_PDP_023 – Verify product availability for selected pin code.
+TC_PDP_023: Verify product availability for selected pin code.
 
-TC_PDP_024 – Verify adding/removing product from wishlist.
+TC_PDP_024: Verify adding/removing product from wishlist.
 
-TC_PDP_025 – Verify product reviews and ratings are displayed.
+TC_PDP_025: Verify product reviews and ratings are displayed.
 
-TC_PDP_026 – Verify related/recommended products are displayed.
+TC_PDP_026: Verify related/recommended products are displayed.
 
 🛒 Cart
 
-TC_CART_027 – Verify adding a single product to cart.
+TC_CART_027:  Verify adding a single product to cart.
 
-TC_CART_028 – Verify adding multiple products to cart.
+TC_CART_028:  Verify adding multiple products to cart.
 
-TC_CART_029 – Verify updating product quantity in cart.
+TC_CART_029:  Verify updating product quantity in cart.
 
-TC_CART_030 – Verify removing a product from cart.
+TC_CART_030:  Verify removing a product from cart.
 
-TC_CART_031 – Verify cart total updates correctly.
+TC_CART_031:  Verify cart total updates correctly.
 
-TC_CART_032 – Verify out-of-stock products cannot be added to cart.
+TC_CART_032:  Verify out-of-stock products cannot be added to cart.
 
-TC_CART_033 – Verify saving products for later.
+TC_CART_033: Verify saving products for later.
 
 💳 Checkout & Payments
 
-TC_CHECKOUT_034 – Verify placing order with COD.
+TC_CHECKOUT_034: Verify placing order with COD.
 
-TC_CHECKOUT_035 – Verify placing order with valid card details.
+TC_CHECKOUT_035: Verify placing order with valid card details.
 
-TC_CHECKOUT_036 – Verify error for invalid card details.
+TC_CHECKOUT_036: Verify error for invalid card details.
 
-TC_CHECKOUT_037 – Verify placing order with UPI.
+TC_CHECKOUT_037: Verify placing order with UPI.
 
-TC_CHECKOUT_038 – Verify placing order with Wallet.
+TC_CHECKOUT_038: Verify placing order with Wallet.
 
-TC_CHECKOUT_039 – Verify applying a valid coupon.
+TC_CHECKOUT_039: Verify applying a valid coupon.
 
-TC_CHECKOUT_040 – Verify applying an expired/invalid coupon.
+TC_CHECKOUT_040: Verify applying an expired/invalid coupon.
 
-TC_CHECKOUT_041 – Verify checkout with multiple saved addresses.
+TC_CHECKOUT_041: Verify checkout with multiple saved addresses.
 
-TC_CHECKOUT_042 – Verify checkout with empty cart (should fail).
+TC_CHECKOUT_042: Verify checkout with empty cart (should fail).
 
 📜 Orders & Profile
 
-TC_ORDER_043 – Verify order confirmation page displays order ID.
+TC_ORDER_043: Verify order confirmation page displays order ID.
 
-TC_ORDER_044 – Verify order is listed in “My Orders.”
+TC_ORDER_044: Verify order is listed in “My Orders.”
 
-TC_ORDER_045 – Verify order details page shows product, price, status.
+TC_ORDER_045: Verify order details page shows product, price, status.
 
-TC_ORDER_046 – Verify order cancellation flow.
+TC_ORDER_046: Verify order cancellation flow.
 
-TC_ORDER_047 – Verify refund initiation flow.
+TC_ORDER_047: Verify refund initiation flow.
 
-TC_PROFILE_048 – Verify updating profile details (name, phone, email).
+TC_PROFILE_048: Verify updating profile details (name, phone, email).
 
-TC_PROFILE_049 – Verify adding a new address.
+TC_PROFILE_049: Verify adding a new address.
 
-TC_PROFILE_050 – Verify deleting an address.
+TC_PROFILE_050: Verify deleting an address.
 
 🔔 Notifications & Misc
 
