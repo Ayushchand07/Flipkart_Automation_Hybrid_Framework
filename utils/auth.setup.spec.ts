@@ -11,5 +11,5 @@ test('Login and save Flipkart session', async ({ page }) => {
   // ✅ Make sure account menu is visible before saving state
   await page.waitForTimeout(10000)
   // Save storage state
-  await page.context().storageState({ path: 'auth.json' });
+  await page.context().storageState({ path: 'storageStates/auth.json' });
 });

@@ -28,7 +28,7 @@ export class LoginPage{
         this.verifyOtpButton = page.getByRole('button', { name: 'Verify' })
         this.name = this.page.getByText('Ayush')
         this.emptyEmailToaster = this.page.getByText('Please enter valid Email ID/Mobile number')
-        this.profileIcon = this.page.locator("._1TOQfO")
+        this.profileIcon = this.page.locator(".H6-NpN")
         this.logoutOption = this.page.getByText('Logout')
 
     }
@@ -44,7 +44,7 @@ export class LoginPage{
     async login(){
         // await this.loginIcon.click()
         await this.page.waitForTimeout(5000)      
-        await this.userNameField.fill('8586063697')
+        await this.userNameField.fill('7827660564')
         await this.requestOtpButton.click()
         await expect (this.text).toBeVisible()
         await this.page.waitForTimeout(30000)

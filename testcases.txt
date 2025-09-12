@@ -24,7 +24,7 @@ TC_AUTH_001: Verify login with valid credentials.
 
 TC_AUTH_002: Verify login with invalid credentials.
 
-TC_AUTH_003: Verify login with empty fields.
+TC_AUTH_003: Verify login with empty fields.*****************
 
 TC_AUTH_004: Verify OTP login flow (if available).
 
@@ -32,7 +32,7 @@ TC_AUTH_005: Verify login with “Remember me” option.
 
 TC_AUTH_006: Verify new user sign-up with valid details.
 
-TC_AUTH_007: Verify error when signing up with existing email/phone.
+TC_AUTH_007: Verify error when signing up with existing email/phone.*************
 
 TC_AUTH_008: Verify password reset flow with valid email/phone.
 
