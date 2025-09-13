@@ -20,25 +20,25 @@ Priority
 
 🔑 Authentication (Login/Signup/Logout)
 
-TC_AUTH_001: Verify login with valid credentials.
+TC_AUTH_001: Verify login with valid credentials.--------Not needed
 
-TC_AUTH_002: Verify login with invalid credentials.
+TC_AUTH_002: Verify login with invalid credentials.---------DONE
 
-TC_AUTH_003: Verify login with empty fields.*****************
+TC_AUTH_003: Verify login with empty fields.--------------DONE
 
-TC_AUTH_004: Verify OTP login flow (if available).
+TC_AUTH_004: Verify OTP login flow (if available).------------DONE WITH SESSION STORAGE
 
-TC_AUTH_005: Verify login with “Remember me” option.
+TC_AUTH_005: Verify login with “Remember me” option.----------------NOT APPLICABLE
 
-TC_AUTH_006: Verify new user sign-up with valid details.
+TC_AUTH_006: Verify new user sign-up with valid details.---------------NEED MULTIPLE NEW CREDS
 
-TC_AUTH_007: Verify error when signing up with existing email/phone.*************
+TC_AUTH_007: Verify error when signing up with existing email/phone.--------------DONE
 
-TC_AUTH_008: Verify password reset flow with valid email/phone.
+TC_AUTH_008: Verify password reset flow with valid email/phone.-------------NOt APPLICABLE
 
-TC_AUTH_009: Verify logout functionality.
+TC_AUTH_009: Verify logout functionality.--------------TO BE DONE
 
-TC_AUTH_010: Verify session timeout logs user out.
+TC_AUTH_010: Verify session timeout logs user out. -----------------NOT APPLICABLE
 
 🔍 Search & Filters
 

@@ -13,7 +13,7 @@ export class SignUpPage extends LoginPage{
         this.createNewAccountOption = page.getByText('Create an account')
         this.userNameField = page.locator('form').filter({ hasText: 'Enter Mobile number' }).getByRole('textbox')
         this.continueButton = page.getByRole('button', {name: 'Continue'});
-        this.errorToaster = page.locator('.eIDgeN').getByText('You are already registered. Please log in')
+        this.errorToaster = page.locator('.eIDgeN').getByText('You are already registered. Please log in.')
 
     }
 
@@ -23,6 +23,7 @@ export class SignUpPage extends LoginPage{
         await this.createNewAccountOption.click()
         await this.userNameField.fill('7827660564')
         await this.continueButton.click()
+        await this.errorToaster.waitFor({state: "visible"})
         //await expect(this.errorToaster).toBeVisible()
         await expect(this.createNewAccountOption).toBeVisible()
         await expect(this.requestOtpButton).toBeVisible()
