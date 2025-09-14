@@ -1,155 +1,190 @@
-Got it 🚀 — you’re asking for a large collection of test cases for your Flipkart automation framework using Playwright + TypeScript.
-Below, I’ll expand the list into a detailed suite (~50 test cases) covering Authentication, Search, Filters, Product Details, Cart, Checkout, Orders, Profile, Payments, Notifications, and Edge Cases.
+📋 Amazon.in – Detailed Test Case Summary
+🔹 1. Authentication (Sign In / Sign Up)
 
-Each test case will follow this format:
+TC_AUTH_001: Verify login with valid credentials (happy path). -------DONE
 
-Test Case ID
+TC_AUTH_002: Verify login with invalid email.---------DONE
 
-Module
+TC_AUTH_003: Verify login with invalid password.------DONE
 
-Title
+TC_AUTH_004: Verify login with empty fields.------DONE
 
-Preconditions
+TC_AUTH_005: Verify "Forgot Password" functionality is present.-----------DONE
 
-Test Steps
+TC_AUTH_006: Verify logout clears session & redirects to login page.--------DONE
 
-Expected Result
+TC_AUTH_007: Verify session persists after page refresh.-----------DONE
 
-Priority
+🔹 2. Search & Browse
 
+TC_SEARCH_001: Verify search with valid keyword returns relevant products.----------
 
-🔑 Authentication (Login/Signup/Logout)
+TC_SEARCH_002: Verify search with misspelled keyword suggests correct results.
 
-TC_AUTH_001: Verify login with valid credentials.--------Not needed
+TC_SEARCH_003: Verify search with category filter applies correctly.
 
-TC_AUTH_002: Verify login with invalid credentials.---------DONE
+TC_SEARCH_004: Verify price range filter narrows down results.
 
-TC_AUTH_003: Verify login with empty fields.--------------DONE
+TC_SEARCH_005: Verify brand filter works correctly.
 
-TC_AUTH_004: Verify OTP login flow (if available).------------DONE WITH SESSION STORAGE
+TC_SEARCH_006: Verify multiple filters (price + brand + rating).
 
-TC_AUTH_005: Verify login with “Remember me” option.----------------NOT APPLICABLE
+TC_SEARCH_007: Verify search for unavailable product shows "No results".
 
-TC_AUTH_006: Verify new user sign-up with valid details.---------------NEED MULTIPLE NEW CREDS
+TC_SEARCH_008: Verify sorting by price low → high works correctly.
 
-TC_AUTH_007: Verify error when signing up with existing email/phone.--------------DONE
+TC_SEARCH_009: Verify sorting by price high → low works correctly.
 
-TC_AUTH_008: Verify password reset flow with valid email/phone.-------------NOt APPLICABLE
+TC_SEARCH_010: Verify sorting by customer ratings works correctly.
 
-TC_AUTH_009: Verify logout functionality.--------------TO BE DONE
+TC_SEARCH_011: Verify pagination works for large result sets.
 
-TC_AUTH_010: Verify session timeout logs user out. -----------------NOT APPLICABLE
+TC_SEARCH_012: Verify each product card displays name, price, rating, and image.
 
-🔍 Search & Filters
+🔹 3. Product Details Page
 
-TC_SEARCH_011: Verify search with valid keyword shows relevant results.
+TC_PDP_001: Verify navigation to product details from search results.
 
-TC_SEARCH_012: Verify search with invalid keyword shows “No results.”
+TC_PDP_002: Verify product title matches the search result.
 
-TC_SEARCH_013: Verify autocomplete suggestions in search bar.
+TC_PDP_003: Verify product price is displayed correctly.
 
-TC_SEARCH_014: Verify search results pagination.
+TC_PDP_004: Verify all product images load and are viewable.
 
-TC_SEARCH_015: Verify sorting: Price Low → High.
+TC_PDP_005: Verify product specifications and details tabs load.
 
-TC_SEARCH_016: Verify sorting: Price High → Low.
+TC_PDP_006: Verify customer reviews & ratings are displayed.
 
-TC_SEARCH_017: Verify sorting: Customer Ratings.
+TC_PDP_007: Verify "Add to Cart" button is functional.
 
-TC_SEARCH_018: Verify filtering by brand.
+TC_PDP_008: Verify "Buy Now" button is functional.
 
-TC_SEARCH_019: Verify filtering by price range.
+TC_PDP_009: Verify product availability (In stock/Out of stock).
 
-TC_SEARCH_020: Verify filtering by discount.
+TC_PDP_010: Verify delivery options for valid pincode.
 
-📦 Product Details Page (PDP)
+TC_PDP_011: Verify correct error message for invalid pincode.
 
-TC_PDP_021: Verify product images are displayed.
+TC_PDP_012: Verify seller information is displayed.
 
-TC_PDP_022: Verify product name, price, and specifications are correct.
+🔹 4. Cart Functionality
 
-TC_PDP_023: Verify product availability for selected pin code.
+TC_CART_001: Verify product can be added to cart from product page.
 
-TC_PDP_024: Verify adding/removing product from wishlist.
+TC_CART_002: Verify product can be added to cart from search results page.
 
-TC_PDP_025: Verify product reviews and ratings are displayed.
+TC_CART_003: Verify cart icon count updates correctly.
 
-TC_PDP_026: Verify related/recommended products are displayed.
+TC_CART_004: Verify multiple products can be added to cart.
 
-🛒 Cart
+TC_CART_005: Verify product quantity can be updated in cart.
 
-TC_CART_027:  Verify adding a single product to cart.
+TC_CART_006: Verify product can be removed from cart.
 
-TC_CART_028:  Verify adding multiple products to cart.
+TC_CART_007: Verify cart total updates when quantity changes.
 
-TC_CART_029:  Verify updating product quantity in cart.
+TC_CART_008: Verify price breakdown (subtotal, tax, delivery).
 
-TC_CART_030:  Verify removing a product from cart.
+TC_CART_009: Verify "Save for Later" functionality.
 
-TC_CART_031:  Verify cart total updates correctly.
+TC_CART_010: Verify empty cart page is displayed correctly.
 
-TC_CART_032:  Verify out-of-stock products cannot be added to cart.
+🔹 5. Checkout & Payments
 
-TC_CART_033: Verify saving products for later.
+TC_CHECKOUT_001: Verify checkout flow starts from cart.
 
-💳 Checkout & Payments
+TC_CHECKOUT_002: Verify login is required for checkout if user not signed in.
 
-TC_CHECKOUT_034: Verify placing order with COD.
+TC_CHECKOUT_003: Verify user can add new shipping address.
 
-TC_CHECKOUT_035: Verify placing order with valid card details.
+TC_CHECKOUT_004: Verify user can select existing shipping address.
 
-TC_CHECKOUT_036: Verify error for invalid card details.
+TC_CHECKOUT_005: Verify payment method selection (Credit card, UPI, COD, NetBanking).
 
-TC_CHECKOUT_037: Verify placing order with UPI.
+TC_CHECKOUT_006: Verify new payment method can be added.
 
-TC_CHECKOUT_038: Verify placing order with Wallet.
+TC_CHECKOUT_007: Verify order summary before placing order.
 
-TC_CHECKOUT_039: Verify applying a valid coupon.
+TC_CHECKOUT_008: Verify valid coupon code applies discount.
 
-TC_CHECKOUT_040: Verify applying an expired/invalid coupon.
+TC_CHECKOUT_009: Verify invalid/expired coupon code shows error.
 
-TC_CHECKOUT_041: Verify checkout with multiple saved addresses.
+TC_CHECKOUT_010: Verify successful order placement.
 
-TC_CHECKOUT_042: Verify checkout with empty cart (should fail).
+TC_CHECKOUT_011: Verify confirmation email is triggered after order.
 
-📜 Orders & Profile
+TC_CHECKOUT_012: Verify placed order appears under "Your Orders".
 
-TC_ORDER_043: Verify order confirmation page displays order ID.
+🔹 6. Orders & Returns
 
-TC_ORDER_044: Verify order is listed in “My Orders.”
+TC_ORDER_001: Verify "Your Orders" lists all recent orders.
 
-TC_ORDER_045: Verify order details page shows product, price, status.
+TC_ORDER_002: Verify order details (name, price, status).
 
-TC_ORDER_046: Verify order cancellation flow.
+TC_ORDER_003: Verify ability to cancel an order (before dispatch).
 
-TC_ORDER_047: Verify refund initiation flow.
+TC_ORDER_004: Verify return request flow works correctly.
 
-TC_PROFILE_048: Verify updating profile details (name, phone, email).
+TC_ORDER_005: Verify refund status is updated after return.
 
-TC_PROFILE_049: Verify adding a new address.
+TC_ORDER_006: Verify reorder functionality from past orders.
 
-TC_PROFILE_050: Verify deleting an address.
+🔹 7. Account & Profile Management
 
-🔔 Notifications & Misc
+TC_PROFILE_001: Verify user can update profile info (name, phone, email).
 
-TC_MISC_051 – Verify promotional banners redirect to correct products.
+TC_PROFILE_002: Verify password update works.
 
-TC_MISC_052 – Verify push notifications (if enabled).
+TC_PROFILE_003: Verify user can add new address.
 
-TC_MISC_053 – Verify broken links are not present on homepage.
+TC_PROFILE_004: Verify user can edit existing address.
 
-TC_MISC_054 – Verify responsiveness across devices (mobile, tablet, desktop).
+TC_PROFILE_005: Verify user can delete address.
 
-TC_MISC_055 – Verify search results page loads under 3 seconds (performance).
+TC_PROFILE_006: Verify user can add new payment method.
 
-TC_MISC_056 – Verify wishlist persists across sessions.
+TC_PROFILE_007: Verify user can remove existing payment method.
 
-TC_MISC_057 – Verify recently viewed products section updates correctly.
+TC_PROFILE_008: Verify Prime membership details are visible/manageable.
 
-TC_MISC_058 – Verify error handling for server downtime (500 error).
+🔹 8. Negative & Edge Scenarios
 
-TC_MISC_059 – Verify proper message for maintenance downtime.
+TC_NEG_001: Verify user cannot add out-of-stock item to cart.
 
-TC_MISC_060 – Verify language selection (if multilingual support exists).
+TC_NEG_002: Verify expired/invalid coupon is rejected.
 
-👉 That’s 60 detailed test cases covering all major Flipkart user journeys + edge cases.
+TC_NEG_003: Verify invalid pincode shows proper error.
+
+TC_NEG_004: Verify checkout fails with invalid payment details.
+
+TC_NEG_005: Verify incorrect OTP blocks payment.
+
+TC_NEG_006: Verify refreshing page during checkout does not lose cart.
+
+TC_NEG_007: Verify logging out during checkout requires login again.
+
+🔹 9. API Validations
+
+TC_API_001: Verify search API returns correct products.
+
+TC_API_002: Verify add-to-cart API updates cart count.
+
+TC_API_003: Verify cart API reflects updated total after quantity change.
+
+TC_API_004: Verify checkout API requires authentication.
+
+TC_API_005: Verify order API response matches UI order details.
+
+TC_API_006: Mock add-to-cart API failure and validate UI error message.
+
+🔹 10. Performance & Reliability
+
+TC_PERF_001: Verify home page loads within 3 seconds.
+
+TC_PERF_002: Verify search results load within acceptable threshold.
+
+TC_PERF_003: Verify product image loads in <2 seconds.
+
+TC_PERF_004: Verify checkout completes within X seconds.
+
+TC_PERF_005: Verify API response time for cart/search APIs <500ms.

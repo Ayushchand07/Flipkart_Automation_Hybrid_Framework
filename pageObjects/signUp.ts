@@ -1,5 +1,5 @@
 import { Locator, expect, Page } from "@playwright/test";
-import { LoginPage } from "./login";
+import { LoginPage } from "./signIn";
 
 export class SignUpPage extends LoginPage{
 
@@ -19,7 +19,8 @@ export class SignUpPage extends LoginPage{
 
     async signUpWithExistingUser(){
         // const existingUserName = process.env.USERNAME
-        await this.loginIcon.click()
+        await this.signInToolbarOption.hover()
+        await this.signInButton.click()
         await this.createNewAccountOption.click()
         await this.userNameField.fill('7827660564')
         await this.continueButton.click()
