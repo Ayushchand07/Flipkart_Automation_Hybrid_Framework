@@ -4,6 +4,7 @@ import { LoginPage } from '../pageObjects/login';
 test('Login and save Flipkart session', async ({ page }) => {
   test.setTimeout(90000); // extend timeout
   await page.goto('https://www.flipkart.com/');
+  await page.waitForLoadState('networkidle');
 
   const loginPage = new LoginPage(page);
   await loginPage.login();

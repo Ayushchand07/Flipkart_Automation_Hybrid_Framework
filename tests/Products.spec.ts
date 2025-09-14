@@ -3,7 +3,8 @@ import { LoginPage } from '../pageObjects/login';
 import { HomePage } from '../pageObjects/homePage';
 
   test.use({ storageState: 'storageStates/auth.json' });
-  test('TC_AUTH_009: Verify logout functionality', async ({ page }) => {
+  
+  test('TC_SEARCH_011: Verify search with valid keyword shows relevant results.', async ({ page }) => {
   
     const loginPage = new LoginPage(page);
     await loginPage.navigateToUrl()
