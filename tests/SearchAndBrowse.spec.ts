@@ -11,7 +11,12 @@ test('TC_SEARCH_001: Verify search with valid keyword returns relevant products.
   const signInPage = new SignInPage(page);
   await signInPage.signIn()
   const homePage = new HomePage(page);
-  await homePage.searchProduct("Bat")  
+  await homePage.searchProduct('Bat', 'bat','cricket')  
 });
 
-
+test('TC_SEARCH_002: Verify search with misspelled keyword suggests correct results.', async ({ page }) => {
+  const signInPage = new SignInPage(page);
+  await signInPage.signIn()
+  const homePage = new HomePage(page);
+  await homePage.searchProduct('criket bat', 'bat','cricket')  
+});

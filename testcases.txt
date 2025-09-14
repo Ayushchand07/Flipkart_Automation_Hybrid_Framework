@@ -17,9 +17,9 @@ TC_AUTH_007: Verify session persists after page refresh.-----------DONE
 
 🔹 2. Search & Browse
 
-TC_SEARCH_001: Verify search with valid keyword returns relevant products.----------
+TC_SEARCH_001: Verify search with valid keyword returns relevant products.----------DONE
 
-TC_SEARCH_002: Verify search with misspelled keyword suggests correct results.
+TC_SEARCH_002: Verify search with misspelled keyword suggests correct results.-----DONE
 
 TC_SEARCH_003: Verify search with category filter applies correctly.
 
