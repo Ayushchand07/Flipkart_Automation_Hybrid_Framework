@@ -19,11 +19,11 @@ TC_AUTH_007: Verify session persists after page refresh.-----------DONE
 
 TC_SEARCH_001: Verify search with valid keyword returns relevant products.----------DONE
 
-TC_SEARCH_002: Verify search with misspelled keyword suggests correct results.-----DONE
+TC_SEARCH_002: Verify search with misspelled keyword suggests correct results.-----------DONE
 
 TC_SEARCH_003: Verify search with category filter applies correctly.
 
-TC_SEARCH_004: Verify price range filter narrows down results.
+TC_SEARCH_004: Verify price range filter narrows down results.------------Partially done
 
 TC_SEARCH_005: Verify brand filter works correctly.
 

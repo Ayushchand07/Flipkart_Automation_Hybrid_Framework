@@ -8,7 +8,7 @@ export class SignInPage{
 
     readonly page: Page
     readonly signInToolbarOption: Locator
-    readonly signInButton: Locator
+   // readonly signInButton: Locator
     readonly userNameField: Locator
     readonly continueButton: Locator
     readonly passwordField: Locator
@@ -27,7 +27,7 @@ export class SignInPage{
     constructor(page: Page){
         this.page = page;
         this.signInToolbarOption = page.locator('#nav-link-accountList');
-        this.signInButton = page.locator('#nav-flyout-ya-signin')
+        //this.signInButton = page.locator('#nav-flyout-ya-signin')
         this.userNameField = page.locator('#ap_email_login')
         this.continueButton = page.locator('#continue')
         this.passwordField = page.locator('#ap_password')
@@ -53,8 +53,8 @@ export class SignInPage{
     }
 
     async signIn(){
-        await this.signInToolbarOption.hover()
-        await this.signInButton.click()
+        await this.signInToolbarOption.click()
+        //await this.signInButton.click()
         await this.userNameField.waitFor({state: 'visible'})   
         await this.userNameField.fill('aayushchand900@gmail.com')
         await this.continueButton.click()
@@ -65,7 +65,7 @@ export class SignInPage{
 
     async signInWithEmptyFields(){
         await this.signInToolbarOption.hover()
-        await this.signInButton.click()
+        //await this.signInButton.click()
         await this.userNameField.waitFor({state: 'visible'})
         await this.continueButton.click()
         await expect(this.emptyEmailErrorMessage).toBeVisible() 
@@ -73,7 +73,7 @@ export class SignInPage{
 
     async signInWithInvalidEmail(){
         await this.signInToolbarOption.hover()
-        await this.signInButton.click()
+        //await this.signInButton.click()
         await this.userNameField.waitFor({state: 'visible'})
         await this.userNameField.fill('sfqwefasd')
         await this.continueButton.click()
@@ -82,7 +82,7 @@ export class SignInPage{
 
     async signInWithInvalidPassword(){
         await this.signInToolbarOption.hover()
-        await this.signInButton.click()
+       // await this.signInButton.click()
         await this.userNameField.waitFor({state: 'visible'})
         await this.userNameField.fill('aayushchand900@gmail.com')
         await this.continueButton.click()
@@ -93,7 +93,7 @@ export class SignInPage{
 
     async verifyForgetPasswordIsPresent(){
         await this.signInToolbarOption.hover()
-        await this.signInButton.click()
+       // await this.signInButton.click()
         await this.userNameField.waitFor({state: 'visible'})
         await this.userNameField.fill('aayushchand900@gmail.com')
         await this.continueButton.click()
