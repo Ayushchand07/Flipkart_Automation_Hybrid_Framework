@@ -4,6 +4,9 @@ import * as dotenv from 'dotenv'
 
 dotenv.config()
 
+const userName = process.env.USERNAME
+const password = process.env.PASSWORD
+
 export class SignInPage{
 
     readonly page: Page
@@ -55,10 +58,12 @@ export class SignInPage{
     async signIn(){
         await this.signInToolbarOption.click()
         //await this.signInButton.click()
-        await this.userNameField.waitFor({state: 'visible'})   
-        await this.userNameField.fill('aayushchand900@gmail.com')
+        await this.userNameField.waitFor({state: 'visible'})
+        if(!userName){throw new Error ('USERNAME not defined in .env file') }   
+        await this.userNameField.fill(userName)
         await this.continueButton.click()
-        await this.passwordField.fill('Veersa@123')
+        if(!password){throw new Error('PASSWORD not defined in .env file')}
+        await this.passwordField.fill(password)
         await this.signInSubmitButton.click()
         await expect(this.signInToolbarOption).toContainText('Hello');
     }
@@ -84,7 +89,8 @@ export class SignInPage{
         await this.signInToolbarOption.hover()
        // await this.signInButton.click()
         await this.userNameField.waitFor({state: 'visible'})
-        await this.userNameField.fill('aayushchand900@gmail.com')
+         if(!userName){throw new Error ('USERNAME not defined in .env file')}
+        await this.userNameField.fill(userName)
         await this.continueButton.click()
         await this.passwordField.fill('dsvsdfsr')
         await this.signInSubmitButton.click()
@@ -95,7 +101,8 @@ export class SignInPage{
         await this.signInToolbarOption.hover()
        // await this.signInButton.click()
         await this.userNameField.waitFor({state: 'visible'})
-        await this.userNameField.fill('aayushchand900@gmail.com')
+         if(!userName){throw new Error ('USERNAME not defined in .env file') }   
+        await this.userNameField.fill(userName)
         await this.continueButton.click()
         await expect(this.forgetPasswordOption).toBeVisible()
     }
@@ -105,7 +112,4 @@ export class SignInPage{
         await this.signOutOption.click()
         await expect(this.userNameField).toBeVisible()
     }
-    
-
-
 }

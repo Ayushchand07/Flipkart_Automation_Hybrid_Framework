@@ -1,16 +1,11 @@
 import { test } from '@playwright/test';
-import { LoginPage } from '../pageObjects/login';
+import { SignInPage } from '../pageObjects/signIn';
 
-test('Login and save Flipkart session', async ({ page }) => {
-  test.setTimeout(90000); // extend timeout
-  await page.goto('https://www.flipkart.com/');
-  await page.waitForLoadState('networkidle');
+test('Login and save Amazon session', async ({ page }) => {
 
-  const loginPage = new LoginPage(page);
-  await loginPage.login();
+  const signInPage = new SignInPage(page);
+  await signInPage.navigateToUrl()
+  await signInPage.signIn()
 
-  // ✅ Make sure account menu is visible before saving state
-  await page.waitForTimeout(10000)
-  // Save storage state
   await page.context().storageState({ path: 'storageStates/auth.json' });
 });
